@@ -1,0 +1,1124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080808">
+<title>Happy Birthday Lakruu 👑</title>
+
+<style>
+:root {
+  --gold: #f4d27e;
+  --gold2: #b88935;
+  --black: #080808;
+  --card: #15130f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--black);
+  color: #fff3d4;
+  font-family: Georgia, serif;
+  overflow-x: hidden;
+}
+
+button, input, textarea { font: inherit; }
+
+button { cursor: pointer; }
+
+.gold {
+  color: var(--gold);
+}
+
+.eyebrow {
+  color: var(--gold);
+  letter-spacing: 4px;
+  font: 11px Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+.section {
+  padding: 75px 18px;
+  text-align: center;
+  position: relative;
+}
+
+.section h2 {
+  font-size: clamp(30px, 7vw, 43px);
+  margin: 15px 0;
+  color: var(--gold);
+}
+
+.sub {
+  color: #c7b58e;
+  line-height: 1.8;
+  font: 14px Arial, sans-serif;
+}
+
+.gold-button {
+  display: inline-block;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 35px;
+  background: linear-gradient(120deg,#a8792b,#ffe4a0,#b98b3c);
+  color: #171006;
+  font: bold 13px Arial, sans-serif;
+  letter-spacing: 1px;
+  box-shadow: 0 0 22px #d8a94d35;
+  transition: .25s;
+}
+
+.gold-button:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 0 30px #d8a94d80;
+}
+
+.dark-button {
+  background: transparent;
+  color: var(--gold);
+  border: 1px solid #92703c;
+  border-radius: 25px;
+  padding: 11px 18px;
+  font: 12px Arial, sans-serif;
+  margin: 5px;
+}
+
+.hero {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 18px;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at center,#38280d55,transparent 65%),
+    #080808;
+  text-align: center;
+}
+
+.hero:before, .hero:after {
+  content: "✦";
+  position: absolute;
+  color: #d7ad5c;
+  font-size: 35px;
+  animation: twinkle 2s infinite alternate;
+}
+
+.hero:before { top: 16%; left: 12%; }
+.hero:after { bottom: 18%; right: 12%; }
+
+@keyframes twinkle {
+  from {opacity:.2;transform:scale(.7) rotate(0);}
+  to {opacity:1;transform:scale(1.3) rotate(45deg);}
+}
+
+.crown {
+  font-size: 65px;
+  margin-bottom: 20px;
+  animation: float 3s infinite ease-in-out;
+}
+
+@keyframes float {
+  50% { transform:translateY(-13px) rotate(4deg); }
+}
+
+.hero h1 {
+  font-size: clamp(43px, 11vw, 76px);
+  color: var(--gold);
+  line-height: 1.12;
+  text-shadow: 0 0 30px #c9943d80;
+  animation: shine 3s infinite alternate;
+}
+
+@keyframes shine {
+  to { text-shadow:0 0 40px #f5d27e,0 0 75px #a8792b; }
+}
+
+.hero p {
+  margin: 18px 0;
+}
+
+.hero .small {
+  color: #bba77c;
+  font: 12px Arial, sans-serif;
+  letter-spacing: 3px;
+}
+
+.scroll-note {
+  position: absolute;
+  bottom: 22px;
+  color: #9d8558;
+  font: 11px Arial;
+  letter-spacing: 2px;
+}
+
+.hidden { display:none !important; }
+
+#experience {
+  animation: appear .8s ease;
+}
+
+@keyframes appear {
+  from {opacity:0;transform:translateY(20px);}
+  to {opacity:1;transform:translateY(0);}
+}
+
+nav {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:8px;
+  padding:15px;
+  border-bottom:1px solid #4c3920;
+  background:#0b0a08;
+  position:sticky;
+  top:0;
+  z-index:20;
+}
+
+nav .brand {
+  color:var(--gold);
+  font-size:17px;
+}
+
+nav a {
+  color:#e7d4a7;
+  text-decoration:none;
+  font:10px Arial;
+  padding:5px;
+}
+
+.card {
+  max-width:650px;
+  margin:25px auto;
+  padding:28px 20px;
+  background:linear-gradient(145deg,#201a10,#0d0c0a);
+  border:1px solid #73552c;
+  border-radius:18px;
+  box-shadow:0 12px 40px #0008;
+}
+
+.birthday-name {
+  font-size:clamp(38px,9vw,58px);
+  color:var(--gold);
+  margin:18px 0;
+  text-shadow:0 0 20px #d0a24c55;
+}
+
+.countdown {
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  margin:25px auto;
+  flex-wrap:wrap;
+}
+
+.time-box {
+  background:#19140b;
+  border:1px solid #75572b;
+  border-radius:12px;
+  min-width:65px;
+  padding:13px 9px;
+}
+
+.time-box strong {
+  display:block;
+  font-size:24px;
+  color:var(--gold);
+}
+
+.time-box span {
+  font:9px Arial;
+  color:#b9a77d;
+  letter-spacing:1px;
+}
+
+.joke {
+  color:#e9d8b5;
+  font:14px Arial,sans-serif;
+  line-height:1.8;
+  padding:10px;
+}
+
+.letter {
+  color:#e8d9b9;
+  font-size:16px;
+  line-height:2;
+  white-space:pre-line;
+  text-align:left;
+}
+
+.gallery {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+  max-width:650px;
+  margin:25px auto;
+}
+
+.photo-card {
+  background:#17130d;
+  border:1px solid #74562d;
+  border-radius:12px;
+  overflow:hidden;
+  position:relative;
+}
+
+.photo-card img {
+  display:block;
+  width:100%;
+  height:170px;
+  object-fit:cover;
+}
+
+.photo-card p {
+  padding:10px 5px;
+  color:#e4ca91;
+  font:12px Arial;
+}
+
+.photo-card button {
+  margin-bottom:10px;
+}
+
+.upload-label {
+  display:inline-block;
+  padding:12px 20px;
+  border:1px dashed #bd954d;
+  border-radius:10px;
+  color:var(--gold);
+  font:13px Arial;
+  cursor:pointer;
+}
+
+input, textarea {
+  background:#100e0a;
+  color:white;
+  border:1px solid #785b32;
+  border-radius:9px;
+  padding:13px;
+  width:100%;
+  margin:8px 0;
+  outline:none;
+}
+
+textarea { resize:vertical; }
+
+.music-disc {
+  width:125px;
+  height:125px;
+  border:3px solid var(--gold2);
+  border-radius:50%;
+  margin:25px auto;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:radial-gradient(circle,#b98b3b,#17120b 70%);
+  font-size:48px;
+}
+
+.spinning {
+  animation:spin 5s linear infinite;
+}
+
+@keyframes spin {
+  to {transform:rotate(360deg);}
+}
+
+.cake {
+  font-size:110px;
+  display:inline-block;
+  margin:20px;
+  filter:drop-shadow(0 0 20px #d8a74b55);
+  transition:.3s;
+}
+
+.cake.blow {
+  transform:scale(1.15);
+  filter:drop-shadow(0 0 35px #f4d27e);
+}
+
+.candle-message {
+  color:var(--gold);
+  min-height:30px;
+  margin:12px;
+}
+
+footer {
+  padding:45px 15px;
+  text-align:center;
+  border-top:1px solid #574123;
+  color:#a68a54;
+  font:12px Arial;
+  line-height:2;
+}
+
+#effects {
+  position:fixed;
+  inset:0;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+  z-index:50;
+}
+
+#toast {
+  position:fixed;
+  bottom:20px;
+  left:50%;
+  transform:translateX(-50%);
+  background:#e9ca80;
+  color:#161006;
+  padding:12px 20px;
+  border-radius:25px;
+  font:13px Arial;
+  z-index:100;
+  display:none;
+  max-width:90%;
+  text-align:center;
+}
+
+@media(min-width:650px) {
+  .gallery {grid-template-columns:repeat(3,1fr);}
+  .photo-card img {height:210px;}
+}
+</style>
+</head>
+
+<body>
+
+<canvas id="effects"></canvas>
+<div id="toast"></div>
+
+<!-- WELCOME SCREEN -->
+
+<header class="hero" id="welcome">
+
+  <div class="crown">👑</div>
+
+  <p class="small">THE MOST IMPORTANT DAY OF THE YEAR</p>
+
+  <h1>HAPPY<br>BIRTHDAY</h1>
+
+  <h2 class="gold" style="margin-top:15px;font-size:36px">
+    LAKRUU
+  </h2>
+
+  <p class="sub">
+    Warning: Too much awesomeness ahead 😂
+  </p>
+
+  <p class="sub" style="margin:10px 0 25px">
+    Your birthday surprise is ready...
+  </p>
+
+  <button class="gold-button" id="openBtn">
+    OPEN YOUR SURPRISE 🎁
+  </button>
+
+  <div class="scroll-note">A DAY FULL OF FUN ✦</div>
+
+</header>
+
+<!-- MAIN EXPERIENCE -->
+
+<div id="experience" class="hidden">
+
+<nav>
+  <div class="brand">♛ LAKRUU</div>
+  <div>
+    <a href="#home">HOME</a>
+    <a href="#letter">LETTER</a>
+    <a href="#memories">PHOTOS</a>
+    <a href="#cake">CAKE</a>
+  </div>
+</nav>
+
+<!-- SECTION 1: WELCOME -->
+
+<section class="section" id="home">
+
+  <p class="eyebrow">TODAY'S MAIN CHARACTER</p>
+
+  <div style="font-size:60px;margin:20px">🥳</div>
+
+  <h1 class="birthday-name">LAKRUU!</h1>
+
+  <h2 style="font-size:27px;color:#f4d27e">
+    Happy Birthday, Legend! 🎂
+  </h2>
+
+  <p class="sub">
+    Congratulations! You've successfully survived
+    another 365 days of being dramatic.
+  </p>
+
+  <div class="card">
+
+    <p class="eyebrow">OFFICIAL BIRTHDAY REPORT</p>
+
+    <div class="countdown">
+      <div class="time-box">
+        <strong>100%</strong>
+        <span>AWESOME</span>
+      </div>
+      <div class="time-box">
+        <strong>999+</strong>
+        <span>MEMORIES</span>
+      </div>
+      <div class="time-box">
+        <strong>∞</strong>
+        <span>DRAMA</span>
+      </div>
+      <div class="time-box">
+        <strong>1</strong>
+        <span>LEGEND</span>
+      </div>
+    </div>
+
+    <p class="joke">
+      📢 Breaking News: Lakruu has officially levelled up!
+      <br><br>
+      New age unlocked. Same old madness.
+      <br>
+      More responsibilities? We don't talk about those. 😂
+    </p>
+
+  </div>
+
+  <button class="dark-button" onclick="confettiBurst()">
+    CELEBRATE NOW 🎉
+  </button>
+
+</section>
+
+<!-- SECTION 2: FUNNY SURPRISE -->
+
+<section class="section">
+
+  <p class="eyebrow">SPECIAL BIRTHDAY ANNOUNCEMENT</p>
+
+  <h2>Dear Lakruu 😂</h2>
+
+  <div class="card">
+
+    <div style="font-size:55px">🚨</div>
+
+    <h3 class="gold" style="font-size:24px;margin:15px">
+      IMPORTANT NOTICE
+    </h3>
+
+    <p class="joke">
+      This is your official reminder that:
+      <br><br>
+      1. You are getting older. Sorry! 🤣
+      <br>
+      2. Your craziness is still under investigation.
+      <br>
+      3. Cake calories don't count today.
+      <br>
+      4. You are legally required to enjoy your birthday.
+      <br>
+      5. Your friend deserves a treat. Obviously. 😎
+    </p>
+
+    <button class="gold-button" onclick="nextJoke()">
+      TELL ME ANOTHER JOKE 😂
+    </button>
+
+    <p class="gold" id="jokeResult" style="margin-top:15px">
+      Ready for the birthday roast?
+    </p>
+
+  </div>
+
+</section>
+
+<!-- SECTION 3: PERSONAL LETTER -->
+
+<section class="section" id="letter">
+
+  <p class="eyebrow">WORDS FROM A FRIEND</p>
+
+  <h2>A Little Letter 💌</h2>
+
+  <div class="card">
+
+    <div style="font-size:45px;margin-bottom:15px">💛</div>
+
+    <p class="letter" id="letterText">Dear Lakruu,
+
+Happy Birthday! 🎂❤️
+
+First of all, congratulations on becoming older but hopefully not wiser. 😂
+
+Life is more fun with a friend like you. Your madness, jokes, random conversations and unforgettable moments make ordinary days special.
+
+I hope this new chapter brings you unlimited happiness, good health, success, adventures and plenty of reasons to smile.
+
+May your dreams become reality, your problems become smaller and your cake become bigger!
+
+Never change your amazing personality. Keep laughing, keep shining and keep being the legend you are.
+
+And remember: no matter how old you get, you're still not allowed to act mature all the time. 🤣
+
+Once again, HAPPY BIRTHDAY, LAKRUU!
+
+Your friend, always. ❤️</p>
+
+  </div>
+
+</section>
+
+<!-- SECTION 4: PHOTO GALLERY -->
+
+<section class="section" id="memories">
+
+  <p class="eyebrow">LITTLE MOMENTS, BIG MEMORIES</p>
+
+  <h2>Our Memory Gallery 📸</h2>
+
+  <p class="sub">
+    Upload your favourite pictures and make this surprise personal.
+  </p>
+
+  <div style="margin:25px">
+    <label class="upload-label">
+      ＋ ADD YOUR PHOTOS
+      <input type="file" id="photoInput" accept="image/*" multiple hidden>
+    </label>
+  </div>
+
+  <div class="gallery" id="gallery">
+
+    <div class="photo-card">
+      <div style="height:170px;display:grid;place-items:center;font-size:50px">
+        📸
+      </div>
+      <p>Memory loading...</p>
+    </div>
+
+    <div class="photo-card">
+      <div style="height:170px;display:grid;place-items:center;font-size:50px">
+        🤝
+      </div>
+      <p>Friendship forever</p>
+    </div>
+
+    <div class="photo-card">
+      <div style="height:170px;display:grid;place-items:center;font-size:50px">
+        😂
+      </div>
+      <p>Unlimited madness</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- MUSIC SECTION -->
+
+<section class="section" id="musicSection">
+
+  <p class="eyebrow">THE BIRTHDAY SOUNDTRACK</p>
+
+  <h2>Turn Up The Music 🎵</h2>
+
+  <div class="card">
+
+    <div class="music-disc" id="musicDisc">🎶</div>
+
+    <p class="gold" id="musicName">No song selected</p>
+
+    <p class="sub" style="margin:10px">
+      Upload your favourite birthday song or music file.
+    </p>
+
+    <label class="upload-label">
+      CHOOSE MUSIC 🎧
+      <input type="file" id="musicInput" accept="audio/*" hidden>
+    </label>
+
+    <br><br>
+
+    <button class="gold-button" id="playBtn">
+      ▶ PLAY
+    </button>
+
+    <button class="dark-button" id="pauseBtn">
+      Ⅱ PAUSE
+    </button>
+
+    <button class="dark-button" id="stopBtn">
+      ■ STOP
+    </button>
+
+    <audio id="audio" loop></audio>
+
+    <p class="sub" style="margin-top:15px">
+      Music may need your permission to start.
+    </p>
+
+  </div>
+
+</section>
+
+<!-- SECTION 5: BIRTHDAY CAKE -->
+
+<section class="section" id="cake">
+
+  <p class="eyebrow">THE MOST IMPORTANT PART</p>
+
+  <h2>Time For Cake! 🎂</h2>
+
+  <div class="card">
+
+    <p class="sub">
+      Lakruu, close your eyes, make a wish
+      and get ready!
+    </p>
+
+    <div class="cake" id="cakeEmoji">🎂</div>
+
+    <p class="candle-message" id="cakeMessage">
+      Your cake is waiting! 🕯️
+    </p>
+
+    <button class="gold-button" id="blowBtn">
+      BLOW THE CANDLES! 💨
+    </button>
+
+    <p class="sub" style="margin-top:15px">
+      Warning: Don't eat the phone. 😂
+    </p>
+
+  </div>
+
+</section>
+
+<!-- FINAL FIREWORKS -->
+
+<section class="section">
+
+  <p class="eyebrow">THE GRAND FINALE</p>
+
+  <h2 style="font-size:40px">A Wish For You ✨</h2>
+
+  <div style="font-size:75px;margin:25px">
+    👑
+  </div>
+
+  <p class="sub" style="max-width:450px;margin:auto">
+    May your life be filled with laughter,
+    beautiful friendships, crazy adventures
+    and endless happiness.
+    <br><br>
+    Stay awesome. Stay crazy. Stay Lakruu!
+  </p>
+
+  <button class="gold-button" onclick="fireworks()">
+    LAUNCH THE FIREWORKS 🎆
+  </button>
+
+  <p class="gold" style="margin-top:35px;font-size:19px">
+    HAPPY BIRTHDAY LAKRUU ❤️
+  </p>
+
+</section>
+
+<footer>
+  <p>✦ CREATED WITH LOVE ✦</p>
+  <p>FOR THE ONE AND ONLY LAKRUU</p>
+  <p style="margin-top:10px">BLACK • GOLD • FRIENDSHIP</p>
+</footer>
+
+</div>
+
+<script>
+
+// OPEN THE SURPRISE
+
+document.getElementById("openBtn").addEventListener("click", () => {
+
+  document.getElementById("welcome").classList.add("hidden");
+
+  document.getElementById("experience").classList.remove("hidden");
+
+  window.scrollTo({top:0,behavior:"smooth"});
+
+  confettiBurst();
+
+});
+
+// TOAST MESSAGE
+
+function toast(message) {
+
+  const el = document.getElementById("toast");
+
+  el.textContent = message;
+  el.style.display = "block";
+
+  clearTimeout(window.toastTimer);
+
+  window.toastTimer = setTimeout(() => {
+    el.style.display = "none";
+  },2500);
+
+}
+
+// FUNNY JOKES
+
+const jokes = [
+  "Why did the birthday cake go to school? Because it wanted to be a smartie! 😂",
+  "Lakruu's age is now a classified government secret. 🤫",
+  "Growing older is mandatory. Growing up is optional. 🤣",
+  "You don't look a day older... your camera filter deserves an award! 📸",
+  "Today's special diet: Cake for breakfast, cake for lunch, cake for dinner! 🎂",
+  "Congratulations! You have unlocked another year of legendary laziness. 🏆",
+  "Friendship rule number one: Birthday person buys the cake! 😎"
+];
+
+let jokeIndex = 0;
+
+function nextJoke() {
+
+  const output = document.getElementById("jokeResult");
+
+  output.textContent = jokes[jokeIndex % jokes.length];
+
+  jokeIndex++;
+
+  confettiBurst();
+
+}
+
+// CONFETTI
+
+function confettiBurst() {
+
+  const symbols = ["✦","★","✨","🎉","💛","🎊"];
+
+  for(let i=0;i<65;i++) {
+
+    const piece = document.createElement("div");
+
+    piece.textContent = symbols[
+      Math.floor(Math.random()*symbols.length)
+    ];
+
+    piece.style.position = "fixed";
+    piece.style.left = Math.random()*100+"vw";
+    piece.style.top = "-30px";
+    piece.style.zIndex = "60";
+    piece.style.pointerEvents = "none";
+    piece.style.fontSize = (12+Math.random()*17)+"px";
+
+    const duration = 2+Math.random()*3;
+
+    piece.style.transition = `transform ${duration}s linear, opacity ${duration}s`;
+
+    document.body.appendChild(piece);
+
+    requestAnimationFrame(() => {
+
+      piece.style.transform =
+        `translate(${(Math.random()-.5)*150}px,${innerHeight+70}px) rotate(${Math.random()*700}deg)`;
+
+      piece.style.opacity = "0";
+
+    });
+
+    setTimeout(() => piece.remove(),duration*1000+100);
+
+  }
+
+}
+
+// PHOTO GALLERY
+
+const photoInput = document.getElementById("photoInput");
+
+photoInput.addEventListener("change",function() {
+
+  const gallery = document.getElementById("gallery");
+
+  for(const file of this.files) {
+
+    if(!file.type.startsWith("image/")) continue;
+
+    const url = URL.createObjectURL(file);
+
+    const card = document.createElement("div");
+
+    card.className = "photo-card";
+
+    const image = document.createElement("img");
+
+    image.src = url;
+    image.alt = "Birthday memory";
+
+    const caption = document.createElement("p");
+    caption.textContent = "A beautiful memory ❤️";
+
+    const edit = document.createElement("button");
+    edit.className = "dark-button";
+    edit.textContent = "Edit caption";
+
+    edit.onclick = () => {
+
+      const value = prompt("Enter a photo caption:");
+
+      if(value !== null) caption.textContent = value;
+
+    };
+
+    const remove = document.createElement("button");
+    remove.className = "dark-button";
+    remove.textContent = "Remove";
+
+    remove.onclick = () => {
+      URL.revokeObjectURL(url);
+      card.remove();
+    };
+
+    card.append(image,caption,edit,remove);
+
+    gallery.appendChild(card);
+
+  }
+
+  this.value = "";
+
+});
+
+// MUSIC PLAYER
+
+const audio = document.getElementById("audio");
+
+const musicInput = document.getElementById("musicInput");
+
+const musicDisc = document.getElementById("musicDisc");
+
+musicInput.addEventListener("change",function() {
+
+  const file = this.files[0];
+
+  if(!file) return;
+
+  if(audio.src.startsWith("blob:")) {
+    URL.revokeObjectURL(audio.src);
+  }
+
+  audio.src = URL.createObjectURL(file);
+
+  document.getElementById("musicName").textContent = file.name;
+
+  toast("Music loaded successfully! 🎵");
+
+});
+
+document.getElementById("playBtn").onclick = async () => {
+
+  if(!audio.src) {
+    toast("Upload a music file first!");
+    return;
+  }
+
+  try {
+
+    await audio.play();
+
+    musicDisc.classList.add("spinning");
+
+    toast("Music playing! 🎶");
+
+  } catch(error) {
+
+    toast("Please choose a supported audio file.");
+
+  }
+
+};
+
+document.getElementById("pauseBtn").onclick = () => {
+
+  audio.pause();
+
+  musicDisc.classList.remove("spinning");
+
+};
+
+document.getElementById("stopBtn").onclick = () => {
+
+  audio.pause();
+
+  audio.currentTime = 0;
+
+  musicDisc.classList.remove("spinning");
+
+};
+
+audio.onended = () => musicDisc.classList.remove("spinning");
+
+// CAKE SURPRISE
+
+let candlesBlown = false;
+
+document.getElementById("blowBtn").onclick = () => {
+
+  const cake = document.getElementById("cakeEmoji");
+
+  const message = document.getElementById("cakeMessage");
+
+  if(!candlesBlown) {
+
+    cake.textContent = "🍰";
+
+    cake.classList.add("blow");
+
+    message.textContent =
+      "WISH GRANTED! MAY ALL YOUR DREAMS COME TRUE! ❤️";
+
+    document.getElementById("blowBtn").textContent =
+      "CELEBRATE AGAIN 🎉";
+
+    confettiBurst();
+
+    candlesBlown = true;
+
+  } else {
+
+    cake.textContent = "🎂";
+
+    cake.classList.remove("blow");
+
+    message.textContent = "New cake! New wishes! 😂";
+
+    document.getElementById("blowBtn").textContent =
+      "BLOW THE CANDLES! 💨";
+
+    candlesBlown = false;
+
+  }
+
+};
+
+// FIREWORKS CANVAS
+
+const canvas = document.getElementById("effects");
+
+const ctx = canvas.getContext("2d");
+
+let particles = [];
+
+function resizeCanvas() {
+
+  const ratio = Math.min(devicePixelRatio || 1,2);
+
+  canvas.width = innerWidth*ratio;
+  canvas.height = innerHeight*ratio;
+
+  canvas.style.width = innerWidth+"px";
+  canvas.style.height = innerHeight+"px";
+
+  ctx.setTransform(ratio,0,0,ratio,0,0);
+
+}
+
+resizeCanvas();
+
+window.addEventListener("resize",resizeCanvas);
+
+function createFirework(x,y) {
+
+  const colors = ["#ffdc83","#f5a623","#fff1c0","#d8ad55"];
+
+  for(let i=0;i<65;i++) {
+
+    const angle = Math.random()*Math.PI*2;
+
+    const speed = 1+Math.random()*4;
+
+    particles.push({
+
+      x,y,
+
+      vx:Math.cos(angle)*speed,
+      vy:Math.sin(angle)*speed,
+
+      life:50+Math.random()*30,
+
+      color:colors[Math.floor(Math.random()*colors.length)]
+
+    });
+
+  }
+
+}
+
+function fireworks() {
+
+  for(let i=0;i<7;i++) {
+
+    createFirework(
+      Math.random()*innerWidth,
+      80+Math.random()*innerHeight*.65
+    );
+
+  }
+
+  confettiBurst();
+
+  toast("HAPPY BIRTHDAY LAKRUU! 🎆");
+
+}
+
+function animateFireworks() {
+
+  ctx.clearRect(0,0,innerWidth,innerHeight);
+
+  particles.forEach(p => {
+
+    p.x += p.vx;
+    p.y += p.vy;
+
+    p.vy += .035;
+    p.life--;
+
+    ctx.globalAlpha = Math.max(0,p.life/75);
+
+    ctx.fillStyle = p.color;
+
+    ctx.beginPath();
+
+    ctx.arc(p.x,p.y,2.2,0,Math.PI*2);
+
+    ctx.fill();
+
+  });
+
+  particles = particles.filter(p=>p.life>0);
+
+  ctx.globalAlpha=1;
+
+  requestAnimationFrame(animateFireworks);
+
+}
+
+animateFireworks();
+
+</script>
+
+</body>
+</html>
